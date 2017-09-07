@@ -58,7 +58,7 @@ def _productMapperFactory(colDesc):
 	def coder(val):
 		if val:
 			return T.a(href=products.makeProductLink(val)+fixedArgs,
-				onmouseover=mouseoverHandler,
+				onmouseover=mouseoverHandler,target="_blank",
 				class_="productlink")[re.sub(r"\?.*", "", 
 					os.path.basename(urllib.unquote_plus(str(val)[4:])))]
 		else:
